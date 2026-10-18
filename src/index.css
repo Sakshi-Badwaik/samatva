@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body { @apply bg-mint text-ink font-sans leading-relaxed text-base; }
+  :focus-visible { outline: 3px solid #0B6623; outline-offset: 2px; }
+}
+@layer components {
+  .card { @apply bg-white border border-gin rounded-xl p-5 shadow-sm; }
+  .btn { @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-5 rounded-lg font-semibold transition-colors; }
+  .btn-primary { @apply btn bg-brand text-white hover:bg-hunter disabled:opacity-60; }
+  .btn-secondary { @apply btn bg-white text-brand border border-brand hover:bg-gin; }
+  .field { @apply w-full min-h-[44px] rounded-lg border border-hunter/50 bg-white px-3 py-2; }
+  .label { @apply block font-medium mb-1; }
+  .err { @apply text-red-800 text-sm mt-1; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
